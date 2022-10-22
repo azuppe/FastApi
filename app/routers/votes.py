@@ -3,12 +3,12 @@ from pyexpat import model
 from signal import raise_signal
 from sre_parse import State
 from fastapi import FastAPI, status,  Response, HTTPException, Depends, APIRouter
-from database import engine, get_db
-import models
-import schemas
-import untils
+from app.database import engine, get_db
+import app.models as models
+import app.schemas as schemas
+import app.untils as untils
 from sqlalchemy.orm import Session
-import oauth2
+import app.oauth2 as oauth2
 
 
 # models.Base.metadata.create_all(bind=engine)

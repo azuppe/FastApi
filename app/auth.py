@@ -1,9 +1,9 @@
 
-import untils
-import models
-import schemas
-import oauth2
-from database import get_db
+import app.untils as untils
+import app.models as models
+import app.schemas as schemas
+import app.oauth2 as oauth2
+from app.database import get_db
 from sqlalchemy.orm import Session
 from sre_parse import State
 from fastapi import Depends, APIRouter, status, HTTPException, Response

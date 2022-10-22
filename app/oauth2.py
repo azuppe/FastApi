@@ -1,12 +1,15 @@
+from sys import implementation
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
-import schemas
-import database
-import models
+
+
+import app.schemas as schemas
+import app.database as database
+import app.models as models
 from fastapi import Depends, status, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
-from config import Settings
+from app.config import Settings
 
 
 settings = Settings()

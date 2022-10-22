@@ -2,10 +2,10 @@
 from pyexpat import model
 from fastapi import FastAPI, status,  Response, HTTPException, Depends, APIRouter
 from typing import List, Optional
-from database import engine, get_db
-import models
-import schemas
-import oauth2
+from app.database import engine, get_db
+import app.models as models
+import app.schemas as schemas
+import app.oauth2 as oauth2
 from sqlalchemy import func
 
 from sqlalchemy.orm import Session
